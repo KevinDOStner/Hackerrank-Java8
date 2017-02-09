@@ -14,19 +14,19 @@ public class SparseArrays {
 
 		int N = sc.nextInt();
 		List<String> corpus = IntStream.range(0, N)
-									   .mapToObj(i -> sc.next())
-									   .collect(Collectors.toList());
+					       .mapToObj(i -> sc.next())
+					       .collect(Collectors.toList());
 
 		int Q = sc.nextInt();
 		List<String> queries = IntStream.range(0, Q)
-										.mapToObj(i -> sc.next())
-										.collect(Collectors.toList());
-		
+						.mapToObj(i -> sc.next())
+						.collect(Collectors.toList());
+
 		queries.stream()
-				.mapToLong(query -> corpus.stream()
-										  .filter(p -> p.equals(query))
-										  .count()
-						).forEach(System.out::println);
+			.mapToLong(query -> corpus.stream()
+						  .filter(p -> p.equals(query))
+						  .count()
+			).forEach(System.out::println);
 
 	}
 }
